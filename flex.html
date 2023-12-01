@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Image Slider with Gaps</title>
+    <title>flex</title>
     <style>
         * {
             box-sizing: border-box;
@@ -216,6 +216,23 @@
             outline: none;
             margin: 0 10px;
         }
+	    	.body-image img {
+    max-width: 40%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any default inline spacing */
+    margin: 0 auto; /* Center the image horizontally */
+}
+	@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for screens between 768px and 1024px wide */
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
     </style>
 </head>
 <body>

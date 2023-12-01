@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	   
+    <title>Welcome to my Website!!</title>
+	
+    <style>
+	* {
+			box-sizing: border-box;
+		}
+        body {
+            font-family: Arial, San serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			background-color: white;
+        }
+		 .main-container {
+            max-width: 800px;
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+		 .half-background {
+            height: 100vh;
+            background: url('shesh.jpg') center/cover;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: right;
+			margin-bottom: 0;
+        }
+		 .white-background {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+			.text-inside {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 20px; /* Adjust padding as needed */
+            max-width: 40%; /* Adjust the width of the text container */
+            box-sizing: border-box;
+			font-size: 16px;
+        }
+      header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+		footer {
+			background-color: #333;
+			padding: 2px;
+			text-align: center;
+			color: white;
+			position: absolute:
+			bottom: 0;
+			box-shadow: 0 0 5px;
+		}
+		h5 {
+			color: black;
+			padding: 5px;
+			margin: 10px;
+			text-align: center;
+		}
+		h1 {
+			font-size: 10mm;
+			font-family: Times New Roman;
+		}
+		p {
+			font-family: Times New Roman;
+			font-size: 5mm;
+		}
+         nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+		nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            margin: 0 5px;
+			transition: background-color 0.3s ease;
+        }
+		nav a:hover {
+			background-color: rgba(255, 255, 255, 0.1); /* Change the color as needed */
+			color: #fff; /* Change the text color as needed */
+		}
+		
+
+        section {
+            padding: 60px 20px 20px;
+			
+        }
+
+        .search-bar {
+            margin-right: 10px;
+        }
+
+         .logout-btn {
+           cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+			
+        }
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        .user-profile img {
+    		border-radius: 50%;
+    		margin-right: 10px;
+        }
+		.container{
+            flex: 1;
+            padding: 0; 
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 0;
+        }
+		.container1{
+            border: 1px solid #ccc;
+			box-shadow: 0 0 5px; 
+			display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+		.container2{
+            flex: 1;
+            padding: 0px; 
+            border: 1px solid black;
+			background-color: white;
+			text-align: center;
+			margin-top: 1px;
+			height: 50px;
+			box-shadow: 0 0 5px;
+        }
+		.container3{
+            flex: 1 ;
+            margin: 10px;
+            padding: 10px; 
+            border: 1px solid black;
+			background-color: White;
+			width: 30%;
+			max-width: 100%;
+        }
+		.container4{
+            flex: 1 ;
+            margin: 5px;
+            padding: 5px; 
+			width: 50%;
+			max-width: 100%;
+        }
+		.container5{
+            flex: 1 ;
+            margin: 5px;
+            padding: 5px; 
+			width: 20%;
+			max-width: 100%;
+        }
+        .image-container {
+			flex: 1;
+            display: block;
+            margin: 0 0 10px 10pxs;
+			padding: 5px;
+			margin-right: 1px;
+        }
+		 .slider-container {
+            width: 23%;
+            margin: 5px;
+            overflow: hidden;
+            position: relative;
+			padding: 5px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+       
+        }
+        .right-image {
+            float: right;
+			margin: auto;
+			padding: 5px;
+        }
+
+       
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+			margin-bottom: 0;
+        }
+
+         .text-beside-image {
+			 margin: 20px;
+			 align-text: center;
+			
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .social-button {
+
+            color: black;
+            padding: 10px;
+            border: none;
+			gap: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+			margin-top: 5px;
+        }
+		video {
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            display: block;
+			padding: 10px;
+		}
+		@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for screens between 768px and 1024px wide */
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+
+
+        <div class="half-background">
+        <header>
+            <nav>
+                <div>
+                    <a href="homepage.html">Homepage</a>
+                    <a href="Blogentry.html">IT111 Blog Entries</a>
+                    <a href="index.html">Flex Page</a>
+                </div>
+
+                <div class="user-profile">
+                    <img src="kkkk.jpg" width="50">
+                    <h4><a href="index.html" id="name" target="_blank">Kathryne Villaganas</a></h4>
+                </div>
+            </nav>
+        </header>
+
+
+	<div class="text-inside">
+            <h1>HOMEPAGE</h1>
+        </div>
+    </div>
+
+    <div class="white-background"></div>
+	
+	
+    <section id="home">
+	<div class="container">
+        <h1>Homepage</h1>
+		</div>
+	<div class="container1">
+		<div class="container clearfix">
+			<img src="ddd.png" alt="Your Image" style="float:right;width:350px;margin:0px;align-self:flex-end;">
+			<p class="text-beside-image">  
+ Welcome to Kathryne's corner of the web!
+
+ I'm thrilled to have you here. Let me introduce myself.
+ 
+ I am Kathryne Villaganas, a first-year IT student at Bukidnon 
+ 
+ State University. This website serves as a major output in Introduction to Computing. 
+ 
+ Here, you'll find my brief background, IT Blog Entries, and the Flex page
+
+ where I flex my achievements in life icluding the people in my heart. It's a space where I share my thoughts,
+
+ my background, and creations. I believe in the power of connection. Feel free to
+
+ explore the site and don't heistate to contact me on my soicial media pages that can be found below this container.
+ 
+ I'm excited to engage with fellow enthusiasts.
+ 
+ Thank you for stopping by, and I look forward to sharing this journey with you.
+
+</p> <hr>
+<h2> Hi! It's me, Kath </h2>
+ <hr>
+<p style="align-items: center; margin: 20px;"> Let me tell you somethings I hated and loved, including the hobbies that I was really addicted
+up until now. First is the hobbies; one of my hobby that I was really addicted was watching anime series/movies. It recently
+became my comfort zone including playing mobile legends but only when I'm upset or bored. I like the shade of black
+and spicy foods. Lastly are the things I hated the most; I hate carbonara and the matcha flavor. Don't hate me for that 
+because we all have different taste buds, I still have a lot of things I hated but won't discuss it any further. Enjoy exploring
+my page!!! <3 </p>
+
+</div>
+</div>
+</div>
+
+<div class="container2">
+    <div class="social-button">
+        <a href="https://www.facebook.com/kath.ryne.1217" class="social-button" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.twitter.com/itzkthryn" class="social-button" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/itzkthryn" class="social-button" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+</div>
+
+    </section>
+<div class="container">
+
+   <h2> BE A PROGRAMMER!!! <h2>
+
+</div>
+<video width="90%" height="90%" controls>
+    <source src="vid.mp4" type="video/mp4">
+</video>
+ <div class="container">
+ <h6> credits to @Makroony </h6> <img src="hy.gif" alt="Funny GIF" style="width: 100px;">
+</div>
+
+<div class="container">
+<hr>
+   <p style="margin: 20px;"> As I embark on my journey as a programmer and web developer, 
+I envision myself as a seasoned professional with a wealth of
+ experience and expertise in the field. Eight years from now, 
+ I see myself as a leader in the industry, recognized for my
+ innovative ideas and contributions to the field.
+
+To achieve this goal, I am committed to continuously learning
+ and staying updated with the latest technologies and trends.
+ I will invest time and resources in attending conferences, 
+ workshops, and online courses to expand my skillset and knowledge.
+ 
+Moreover, I will prioritize collaboration and teamwork, 
+recognizing that the success of any project is a result of 
+collective efforts. I will strive to build strong relationships 
+with my colleagues, clients, and stakeholders, fostering open communication and trust.
+
+As a programmer and web developer, I will also prioritize 
+efficiency and productivity. I will leverage automation and
+ optimization techniques to streamline processes and reduce
+ development time. I will also adopt agile methodologies, 
+ allowing for greater flexibility and adaptability in response to changing requirements.
+
+In terms of personal growth, I will focus on developing my leadership 
+and management skills. I will take on leadership roles in projects and 
+teams, learning to effectively delegate tasks, provide guidance, and mentor
+ junior team members. I will also seek out opportunities to manage projects 
+ and teams, gaining experience in project planning, budgeting, and resource allocation. </p>
+<hr>
+</div>
+
+ <script>
+        function logout() {
+            alert('Logout successful!');
+            location.reload();
+        }
+    </script>
+<footer>
+
+	<h3> © 2023 Kathryne V. All rights reserved. </h3>
+
+</footer>
+
+</body>
+</html>

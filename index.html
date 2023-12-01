@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kathryne Villaganas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('yas.gif') no-repeat center center fixed;
+            background-size: cover;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+		.container2{
+            flex: 1;
+            padding: 0px; 
+			text-align: center;
+			margin-top: 1px;
+			height: 50px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #profile {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        #profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+		h1 {
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			color: white;
+			font-size: 50px;
+			font-family: Times New Roman;
+			}
+		button {
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: none ;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		#typing-text {
+            font-size: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #333;
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+		.social-button {
+            color: white;
+            padding: 10px;
+            border: none;
+			gap: 0px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+			@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles for screens between 768px and 1024px wide */
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+<div id="typing-text"></div>
+<div id="profile">
+    <img src="kkkk.jpg" alt="Profile Picture">
+</div>
+
+
+<h1>Kathryne Villaganas </h1>
+
+<button onclick="redirectToPage()">Click Me</button>
+
+<div class="container2">
+    <div class="social-button">
+        <a href="https://www.facebook.com/kath.ryne.1217" class="social-button" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.twitter.com/itzkthryn" class="social-button" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/itzkthryn" class="social-button" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+</div>
+
+    <script>
+        const textToType = "WELCOME TO MY WEBSITE!!!";
+
+        function typeText() {
+            let i = 0;
+            const speed = 100; // Adjust the speed of typing
+
+            function type() {
+                if (i < textToType.length) {
+                    document.getElementById("typing-text").innerHTML += textToType.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        // Call the typeText function when the page loads
+        window.onload = typeText;
+    </script>
+    <script>
+        function handleClick() {
+            alert('Button clicked!');
+            // You can add more actions or functions here.
+        }
+    </script>
+ <script>
+        function redirectToPage() {
+            // Change 'otherpage.html' to the actual file path you want to link to
+            window.location.href = 'homepage.html';
+        }
+    </script>
+
+</body>
+</html>

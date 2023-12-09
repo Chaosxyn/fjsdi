@@ -216,23 +216,17 @@
             outline: none;
             margin: 0 10px;
         }
-	    	.body-image img {
-    max-width: 40%; /* Ensure the image doesn't exceed its container */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove any default inline spacing */
-    margin: 0 auto; /* Center the image horizontally */
-}
-	@media screen and (max-width: 768px) {
-    /* Styles for screens up to 768px wide */
-}
+			@media (max-width: 768px) {
+            .adjustable-image {
+                width: 100px;
+                height: auto;
+            }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Styles for screens between 768px and 1024px wide */
-}
-img, video {
-    max-width: 100%;
-    height: auto;
-}
+            .left-container,
+            .right-container {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -282,6 +276,7 @@ slider-item"><img src="d.jpg" alt="Image 1"></div>
                 <img class="slider-image" src="sa.jpg" alt="Image 3">
                 <img class="slider-image" src="kis.jpg" alt="Image 3">
             </div>
+<p> The journey of life is marked by milestones and triumphs, each a testament to our resilience and dedication. Whether academic, professional, or personal, these achievements are not mere bragging points but reflections of the perseverance that propels us forward. Flexing our accomplishments allows us to acknowledge the hard work invested in reaching our goals. By sharing these successes, we inspire others and contribute to the collective motivation that fuels progress. </p>
 
             <div class="slider-navigation">
                 <button class="prev" onclick="prevSlide('slider1')">❮</button>
@@ -304,6 +299,7 @@ slider-item"><img src="d.jpg" alt="Image 1"></div>
             </div>
         </div>
     </div>
+<p> Beyond individual accomplishments, the support and love of family form an intricate web that cradles our existence. Family is not just a unit but a source of strength and resilience. In flexing our family bonds, we celebrate the collective victories, trials, and joys that shape our shared narrative. The pride in showcasing our familial ties is a celebration of the roots that ground us, providing stability as we reach for the stars. Love, the most profound and transformative force, radiates through our connections with significant others, friends, and confidants. Flexing the love we share is a tribute to the emotional wealth that enriches our lives. In spotlighting the love we have for and receive from others, we promote the importance of empathy, understanding, and compassion. Love transcends personal boundaries, creating a ripple effect that extends far beyond our immediate circles.</p>
 
     <script>
         function showSlide(index, sliderId) {
@@ -348,5 +344,4 @@ slider-item"><img src="d.jpg" alt="Image 1"></div>
 
 </body>
 </html>
-
 
